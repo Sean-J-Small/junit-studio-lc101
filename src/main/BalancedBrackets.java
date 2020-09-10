@@ -13,8 +13,7 @@ public class BalancedBrackets {
      * The string may contain non-bracket characters as well.
      *
      * These strings have balanced brackets:
-     *  "[LaunchCode]", "Launch[Code]", "[]LaunchCode", "", "[]"
-     *
+p;[[[[[[[[[f     *
      * While these do not:
      *   "[LaunchCode", "Launch]Code[", "[", "]["
      *
@@ -28,6 +27,9 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
+                if(brackets < 0) {
+                    return false;
+                }
             }
         }
         return brackets == 0;
